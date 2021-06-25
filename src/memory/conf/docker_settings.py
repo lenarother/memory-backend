@@ -1,7 +1,7 @@
 import os
 import uuid
 
-from moccusite.conf.global_settings import *
+from memory.conf.global_settings import *
 
 
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
