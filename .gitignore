@@ -13,6 +13,9 @@ eggs
 # Db
 db.sqlite3
 
+# Django
+settings.py
+
 # Testing related
 .coverage
 .pytest_cache/
