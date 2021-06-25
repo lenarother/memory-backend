@@ -1,0 +1,19 @@
+# Python
+*.py[co]
+*.so
+.DS_Store
+__pycache__/
+
+# Build related
+*.egg
+*.egg-info
+dist
+eggs
+
+# Db
+db.sqlite3
+
+# Testing related
+.coverage
+.pytest_cache/
+htmlcov/
