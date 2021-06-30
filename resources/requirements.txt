@@ -1,7 +1,9 @@
 Django~=3.2
-psycopg2~=2.9
+psycopg2==2.9.1
+uWSGI==2.0.19.1
 
 django-cors-middleware~=1.5
 djangorestframework~=3.12
 
 Pygments~=2.9
+requests~=2.25

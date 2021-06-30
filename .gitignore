@@ -14,7 +14,7 @@ eggs
 db.sqlite3
 
 # Django
-settings.py
+src/memory/settings.py
 
 # Testing related
 .coverage

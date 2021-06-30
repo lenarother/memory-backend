@@ -1,14 +1,15 @@
 # TODO
-- repository
-- postgres
-- separate settings for production
-- requirements
-- dockerfile (django)
-- dockercompose
+DONE - repository
+DONE - postgres
+DONE - separate settings for production
+DONE - requirements
+- tests
+DONE - dockerfile (django)
+DONE - dockercompose
 
 
-- konto na amazonie: EC2 ()
-- porty na EC2 80
+DONE - konto na amazonie: EC2 ()
+DONE - porty na EC2 80
 
 
 

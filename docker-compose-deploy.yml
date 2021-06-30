@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+  src:
+    build:
+      context: .
+      dockerfile: deployment/memory-django/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_data:/vol/web
+      - ./src:/src
+    environment:
+      - SECRET_KEY=mysecretkey123
+      - ALLOWED_HOSTS=127.0.0.1,localhost,proxy
+      - DEBUG=1
+    depends_on:
+      - postgres
+
+  proxy:
+    build:
+      context: ./deployment/memory-proxy
+      # dockerfile: deployment/memory-proxy/Dockerfile
+    volumes:
+      - static_data:/vol/static
+    ports:
+      - "8080:8080"
+    depends_on:
+      - src
+
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+volumes:
+  static_data:
