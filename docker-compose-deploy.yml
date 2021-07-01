@@ -20,7 +20,6 @@ services:
   proxy:
     build:
       context: ./deployment/memory-proxy
-      # dockerfile: deployment/memory-proxy/Dockerfile
     volumes:
       - static_data:/vol/static
     ports:
