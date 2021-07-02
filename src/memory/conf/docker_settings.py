@@ -4,14 +4,16 @@ import uuid
 from memory.conf.global_settings import *
 
 
-DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
+DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() == 'true'
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', str(uuid.uuid4().hex))
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', str(uuid.uuid4().hex))
 
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
-SENTRY_JS_WHITELIST_URLS = [host.replace('.', '\.') for host in ALLOWED_HOSTS]
+ALLOWED_HOSTS_ENV = os.getenv('ALLOWED_HOSTS')
+if ALLOWED_HOSTS_ENV:
+    ALLOWED_HOSTS.extend(ALLOWED_HOSTS_ENV.split(','))
 
-SECURE_COOKIES = os.environ.get('DJANGO_SECURE_COOKIES', 'True').lower() == 'true'
+
+SECURE_COOKIES = os.getenv('DJANGO_SECURE_COOKIES', 'True').lower() == 'true'
 SESSION_COOKIE_SECURE = SECURE_COOKIES
 CSRF_COOKIE_SECURE = SECURE_COOKIES
 

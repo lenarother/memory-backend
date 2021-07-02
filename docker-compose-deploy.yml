@@ -9,7 +9,6 @@ services:
       - "8000:8000"
     volumes:
       - static_data:/vol/web
-      - ./src:/src
     environment:
       - SECRET_KEY=mysecretkey123
       - ALLOWED_HOSTS=127.0.0.1,localhost,proxy,18.194.137.211

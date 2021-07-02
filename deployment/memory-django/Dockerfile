@@ -12,6 +12,7 @@ RUN chmod +x /scripts/*
 
 RUN mkdir src
 COPY /src src
+RUN sh -c 'if [ ! -f src/memory/settings.py ]; then echo "from memory.conf.docker_settings import *" > src/memory/settings.py; fi'
 WORKDIR src
 
 RUN set -ex && apk --no-cache add sudo
