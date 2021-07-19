@@ -11,7 +11,8 @@ services:
       - static_data:/vol/web
     environment:
       - SECRET_KEY=mysecretkey123
-      - ALLOWED_HOSTS=127.0.0.1,localhost,proxy,3.67.72.197
+      - ALLOWED_HOSTS=127.0.0.1,localhost,proxy,18.197.109.222
+      - POSTGRES_PASSWORD=postgres
       - DEBUG=1
     depends_on:
       - postgres
