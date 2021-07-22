@@ -16,6 +16,6 @@ steps:
       aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY  }}
       aws-region: eu-central-1b
       instance-ids: ${{ secrets.INSTANCE_ID  }}
-      comment: Deploy the master branch
-      working-directory: /home/ubuntu/memory-backend
-      command: /bin/sh ./deploy.sh
+      #working-directory: /home/ubuntu/memory-backend
+      #command: /bin/sh ./deploy.sh
+      run: echo Hello world!
