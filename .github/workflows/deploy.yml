@@ -22,4 +22,4 @@ jobs:
 
     - name: Send Command
       working-directory: ./memory-backend
-      run: docker-compose -f docker-compose-deploy.yml up --build
+      run: ls -la
