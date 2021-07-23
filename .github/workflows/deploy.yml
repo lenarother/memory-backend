@@ -22,4 +22,4 @@ jobs:
 
     - name: Send Command
       working-directory: ./memory-backend
-      command: /bin/sh ./deploy.sh
+      run: git pull
